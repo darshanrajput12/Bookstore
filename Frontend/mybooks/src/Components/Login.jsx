@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast"
 
 function Login() {
   const[openModal , setModal] = useState(true);
@@ -20,7 +22,30 @@ function Login() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/login", userInfo)
+      .then((res) => {
+        // console.log(res);
+
+        if (res.data) {
+          toast.success("Login successfull");
+        }
+
+        localStorage.setItem("user:",JSON.stringify(res.data.user))
+        window.location.reload()
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error : Wrong email or password");
+        }
+      });
+  };
   return (
     <>
     {openModal &&
