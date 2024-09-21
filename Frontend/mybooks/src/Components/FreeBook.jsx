@@ -64,11 +64,8 @@ function FreeBook() {
     <div className="bg-white max-w-screen-2xl container mx-auto md:px-20 px-4">
       <div>
         <h2 className=" text-pink-800 font-bold">Free offered books</h2>
-        <p className=" text-black">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis
-          asperiores ratione nostrum quo doloremque maiores illum minima vel
-          earum, sunt consequatur vitae vero corporis soluta impedit corrupti,
-          qui iste?
+        <p className=" text-black font-serif">
+          These are all free books . Where you can buy and read them in free of cost . But if you want to know about more books , which are very intresting and some biography books , then you need to sign up first and login through your account. There you can see tons of books . Thank you....
         </p>
       </div>
       <div>

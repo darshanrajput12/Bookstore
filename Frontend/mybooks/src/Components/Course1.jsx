@@ -27,7 +27,7 @@ function Course1() {
         <div className="mt-20 items-center justify-center text-center ">
           <h2 className="text-2xl  text-black md:text-4xl">
             We are delighted to have{" "}
-            <span className="text-pink-800"> you here :)</span>
+            <span className="text-pink-800"> you here :</span>
           </h2>
           <p className="mt-6 text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, facere atque vel, dolore nemo temporibus dolores quos modi dolorum enim laudantium incidunt nihil reprehenderit labore quidem adipisci, harum hic? At?</p>
           <Link to={'/'}>

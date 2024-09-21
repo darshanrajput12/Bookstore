@@ -1,7 +1,20 @@
 import React from "react";
 import bookStore2 from "./Images/bookStore2.jpg"
+import toast from "react-hot-toast";
 
 function LeftRight() {
+  const login = ()=>{
+    toast.custom(
+    <div className="mt-14 bg-gray-600 text-white font-serif rounded-lg p-4">
+      <h1>
+      Sign up first or If you already have an account then login and give some extra knowledge to your mind by reading this books. 
+      Knowledge is knowledge , either you get from the books or from other sources , its never wasted...
+      Thankyou... 
+      </h1>
+      </div>
+      );
+
+  }
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row bg-white ">
@@ -26,7 +39,7 @@ function LeftRight() {
             </label>
             
           </div>
-          <button className="button bg-gray-300 px-2 py-1 rounded-md text-black mt-5">Submit</button>
+          <button className="button bg-gray-300 px-2 py-1 rounded-md text-black mt-5 " onClick={login}>Submit</button>
           
         </div>
         <div className=" order-1 w-1/2 md:w-1/2">
